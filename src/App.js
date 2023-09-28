@@ -9,9 +9,11 @@ const App = () => {
 
   useEffect(() => {
     axios
-      .get("https://www.themealdb.com/api/json/v1/1/search.php?s=" + inputResult)
+      .get(
+        "https://www.themealdb.com/api/json/v1/1/search.php?s=" + inputResult
+      )
       .then((res) => setMealsData(res.data.meals));
-      // veux dire que le useEffect se rejouera lorsque la valeur de l'input changera
+    // veux dire que le useEffect se rejouera lorsque la valeur de l'input changera
   }, [inputResult]);
 
   return (
